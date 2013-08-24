@@ -1,0 +1,3 @@
+COPY THE FILE .vimrc IN THE HOME DIRECTORY:
+
+cp vimrc_clone/.vimrc ~/.vimrc
