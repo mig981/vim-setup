@@ -1,6 +1,7 @@
 " Pathogen
 filetype off
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " Syntax Highlighting and Validation
 syntax on
@@ -38,10 +39,6 @@ set completeopt=menuone,longest,preview
 
 " NERD-Tree
 map <leader>n :NERDTreeToggle<CR>
-
-" Rope
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
 
 " Fugitive (Git)
 set statusline+=%{fugitive#statusline()}
