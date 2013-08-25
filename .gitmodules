@@ -58,3 +58,7 @@
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
     ignore = dirty
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+    ignore = dirty

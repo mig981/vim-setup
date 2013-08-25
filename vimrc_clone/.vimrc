@@ -53,3 +53,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+" TagBar (sudo apt-get install exuberant-ctags)
+map <leader>l :TagbarToggle<CR>
+
