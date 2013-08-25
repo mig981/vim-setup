@@ -62,3 +62,7 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
     ignore = dirty
+[submodule "bundle/auto-pairs"]
+	path = bundle/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
+    ignore = dirty
