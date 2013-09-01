@@ -56,3 +56,27 @@ let g:ctrlp_custom_ignore = {
 " TagBar (sudo apt-get install exuberant-ctags)
 map <leader>l :TagbarToggle<CR>
 
+" PythonMode
+" let g:pymode_lint_write = 0
+" let g:pymode_lint = 0
+
+" Remove trailing whitespace
+augroup Whitespace " {{{
+	autocmd!
+	" Remove trailing whitespace from selected filetypes {{{
+	function! <SID>StripTrailingWhitespace()
+		" Preparation: save the last search, and curson position"
+		let _s=@/
+		let l = line(".")
+		let c = col(".")
+		" Do the business"
+		%s/\s\+$//e
+		"Clean up: restore previous search history and cursor position"
+		let @/=_s
+		call cursor(l, c)
+	endfunction
+
+	au FileType html,css,sass,javascript,php,python,ruby,sql,vim au BufWritePre <buffer> :silent! call <SID>StripTrailingWhitespace()
+	" }}}
+augroup END " }}}
+
