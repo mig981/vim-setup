@@ -3,6 +3,12 @@ filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
 
+" Python comments
+" Comment selected Block with #'s
+map <F2> :s/^\(.*\)$/#\1/g<CR>
+" Uncomment selected Block thats commented with #'s
+map <F3> :s/^#//g<CR>"'
+
 " Syntax Highlighting and Validation
 syntax on
 filetype on
@@ -12,11 +18,11 @@ filetype plugin indent on
 set foldmethod=indent
 set foldlevel=99
 
-" Split windows
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+" Navigate splitted windows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 " TODOs
 map <leader>td <Plug>TaskList
