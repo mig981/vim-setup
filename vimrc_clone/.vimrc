@@ -95,6 +95,9 @@ let g:ctrlp_custom_ignore = {
 " TagBar (sudo apt-get install exuberant-ctags)
 map <leader>l :TagbarToggle<CR>
 
+" JavaScript
+let javascript_enable_domhtmlcss = 1
+
 " Remove trailing whitespace
 augroup Whitespace " {{{
 	autocmd!
