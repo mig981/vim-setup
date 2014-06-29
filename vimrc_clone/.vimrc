@@ -14,6 +14,13 @@ syntax on
 filetype on
 filetype plugin indent on
 
+" Theme.
+set t_Co=256
+set background=light
+" let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme github
+
 set number
 " ruler isn't compatible with set statusline.
 " set ruler
