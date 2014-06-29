@@ -106,8 +106,9 @@ map <leader>l :TagbarToggle<CR>
 let javascript_enable_domhtmlcss = 1
 
 " Enabling emmet only for html and css
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+" TODO: this is not working anymore after updating the submodule.
+" let user_emmet_install_global = 0
+" autocmd FileType html,css,scss,less EmmetInstall
 
 " Enabling CloseTag only for html/xml files
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
