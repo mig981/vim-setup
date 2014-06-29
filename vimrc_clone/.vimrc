@@ -98,6 +98,14 @@ map <leader>l :TagbarToggle<CR>
 " JavaScript
 let javascript_enable_domhtmlcss = 1
 
+" Enabling emmet only for html and css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Enabling CloseTag only for html/xml files
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+
 " Remove trailing whitespace
 augroup Whitespace " {{{
 	autocmd!
