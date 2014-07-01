@@ -68,7 +68,10 @@ let g:pyflakes_use_quickfix = 0
 " let g:flake8_max_line_length = 99
 let g:pep8_map='<leader>8'
 " let g:pep8_ignore="E501,W601"
-let g:pymode_lint_write = 0  " Disable Pylint checking on every save
+let g:pymode_lint_on_write = 0  " Disable Pylint checking on every save
+" let g:pymode_rope_regenerate_on_write = 0
+" let g:pymode_warnings = 1  " Turn off plugin's warnings
+" let g:pymode_doc = 0
 
 " Python Indentation (4 spaces for Tab)
 set smartindent
@@ -81,7 +84,9 @@ set expandtab
 " SuperTab
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
+" Not setting preview to avoid PyMode to open the doc popup.
+" set completeopt=menuone,longest,preview
+set completeopt=menuone,longest
 
 " NERD-Tree
 map <leader>n :NERDTreeToggle<CR>
