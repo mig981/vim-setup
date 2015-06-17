@@ -1,0 +1,8 @@
+set t_Co=256
+set background=light
+
+if get(g:, 'force_default_scheme', 0) == 0
+    "let g:solarized_termcolors=256
+    "colorscheme solarized
+    colorscheme github
+endif

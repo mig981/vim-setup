@@ -1,0 +1,55 @@
+"-----------------------------------------------------------------------
+" General
+"-----------------------------------------------------------------------
+" Not setting preview to avoid opening the doc popup.
+set completeopt-=preview
+"au FileType python set omnifunc=pythoncomplete#Complete
+
+autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+"-----------------------------------------------------------------------
+" SuperTab
+"-----------------------------------------------------------------------
+
+let g:SuperTabDefaultCompletionType = "context"
+" Navigate the completion menu from top to bottom.
+let g:SuperTabContextDefaultCompletionType = "<C-n>"
+
+"-----------------------------------------------------------------------
+" Jedi
+"-----------------------------------------------------------------------
+
+let g:jedi#completions_enabled = 0
+let g:jedi#usages_command = "<leader>u"
+let g:jedi#rename_command = "<leader>c"
+let g:jedi#popup_on_dot = 0
+
+"-----------------------------------------------------------------------
+" YouCompleteMe (YCM)
+"-----------------------------------------------------------------------
+
+" sudo apt-get install build-essential cmake
+" sudo apt-get install python-dev
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.sh --clang-completer --omnisharp-completer --gocode-completer
+let g:ycm_add_preview_to_completeopt = 0
+
+"-----------------------------------------------------------------------
+" Ultisnips
+"-----------------------------------------------------------------------
+
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe.
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsListSnippets="<C-l>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

@@ -1,0 +1,2 @@
+" Fugitive (Git)
+set statusline+=%{fugitive#statusline()}

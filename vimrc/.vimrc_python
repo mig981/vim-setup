@@ -1,0 +1,17 @@
+" Python Indentation (4 spaces for Tab)
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+"autocmd FileType js :setlocal sw=2 ts=2
+"autocmd FileType html :setlocal sw=2 ts=2
+
+" Comments
+" Comment selected Block with #'s
+map <F2> :s/^\(.*\)$/#\1/g<CR>
+" Uncomment selected Block thats commented with #'s
+map <F3> :s/^#//g<CR>"'
+
+" Highlights the background in a subtle red for text that goes over the 80 column limit
+"au FileType highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"au FileType match OverLength /\%81v.\+/

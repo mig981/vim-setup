@@ -1,0 +1,5 @@
+Run:
+./scripts/install.sh
+
+or:
+./scripts/copy.sh  # this just moves the .vimrc* files to your ~/ dir
