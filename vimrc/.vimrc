@@ -26,7 +26,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/syntastic'
 Plugin 'klen/python-mode'
+
+" Utils.
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
 
 " Git.
 Plugin 'tpope/vim-git'
