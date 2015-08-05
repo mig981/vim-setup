@@ -27,9 +27,9 @@ let g:syntastic_yaml_checkers = ['jsyaml']
 " Syntastic can be used along with python-mode.
 " However, they both run syntax checks by default when you save buffers to disk.
 " To avoid both plugins opening error windows, you can either set passive mode for python in syntastic (see syntastic_mode_map), or disable lint checks in python-mode, by setting pymode_lint_on_write to 0:
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_on_write = 0
-let g:pymode_lint_on_fly = 1
+let g:pymode_lint_on_fly = 0
 let g:pymode_lint_cwindow = 0
 let g:pymode_trim_whitespaces = 1
 
