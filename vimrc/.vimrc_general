@@ -3,6 +3,9 @@ set number
 set ignorecase
 set smartcase
 
+" Mouse
+set mouse=a
+
 " Code Folding
 set foldmethod=indent
 set foldlevel=99
