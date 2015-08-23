@@ -42,6 +42,7 @@ Plugin 'majutsushi/tagbar'
 
 " HTML
 Plugin 'mattn/emmet-vim'
+Plugin 'mitsuhiko/vim-jinja'
 
 " CSS
 Plugin 'tpope/vim-haml'  " SASS
@@ -56,6 +57,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 " Visuals.
 Plugin 'bling/vim-airline'
 Plugin 'https://bitbucket.org/gale/vim-color-schemes.git'
+
 
 " All the Plugins must be added before the following lines:
 call vundle#end()  " required
