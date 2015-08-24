@@ -8,6 +8,7 @@ echo "* build-essential"
 echo "* cmake"
 echo "* python-dev"
 echo "* exuberant-ctags"
+echo "* flake8 (sudo pip install flake8)"
 echo
 echo "Recommended but not mandatory:"
 echo "* eslint (https://github.com/eslint/eslint)"
