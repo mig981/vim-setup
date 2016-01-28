@@ -26,6 +26,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/syntastic'
 Plugin 'klen/python-mode'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Utils.
 Plugin 'jiangmiao/auto-pairs'
@@ -53,6 +54,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
 
 " Visuals.
 Plugin 'bling/vim-airline'

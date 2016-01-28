@@ -3,6 +3,10 @@ set number
 set ignorecase
 set smartcase
 
+" Search
+set incsearch
+"set hlsearch
+
 " Mouse
 set mouse=a
 
