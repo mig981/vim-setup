@@ -58,7 +58,7 @@ Plugin 'burnettk/vim-angular'
 
 " Visuals.
 Plugin 'bling/vim-airline'
-Plugin 'https://bitbucket.org/gale/vim-color-schemes.git'
+Plugin 'aleg/vim-color-schemes'
 
 
 " All the Plugins must be added before the following lines:
