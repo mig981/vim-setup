@@ -2,10 +2,6 @@
 " Syntastic
 "-----------------------------------------------------------------------
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0  " Not open the error window
 let g:syntastic_check_on_open = 1
@@ -31,7 +27,7 @@ endif
 
 "let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_scss_checkers = ['sassc']
+let g:syntastic_scss_checkers = ['sassc', 'scss_lint']
 let g:syntastic_less_checkers = ['lessc']
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_yaml_checkers = ['jsyaml']
@@ -48,6 +44,11 @@ let g:pymode_lint_on_write = 0
 let g:pymode_lint_on_fly = 0
 let g:pymode_lint_cwindow = 0
 let g:pymode_trim_whitespaces = 1
+
+" Max length
+"let g:pymode_options_colorcolumn = 0  " Hides the vertical column
+"let g:pymode_lint_config = '$HOME/pylint.rc'
+"let g:pymode_options = 1
 
 " Rope (not refactoring nor autocomplete)
 let g:pymode_rope = 0

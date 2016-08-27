@@ -15,6 +15,10 @@ call vundle#begin()
 " Let Vundle manage Vundle, required.
 Plugin 'gmarik/Vundle.vim'
 
+" Fuzzy search.
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
+
 " Autocompletion and Snippets.
 Plugin 'ervandew/supertab'
 Plugin 'davidhalter/jedi-vim'
@@ -33,7 +37,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 
 " Git.
-Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
@@ -52,12 +55,18 @@ Plugin 'ap/vim-css-color'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/javascript-libraries-syntax.vim'
+"Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'mxw/vim-jsx'
 Plugin 'burnettk/vim-angular'
+Plugin 'matthewsimo/angular-vim-snippets'
 
 " Visuals.
-Plugin 'bling/vim-airline'
+if has('gui_running')
+    Plugin 'powerline/fonts'
+endif
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'aleg/vim-color-schemes'
 
 
@@ -70,6 +79,7 @@ filetype plugin indent on  " required
 "-----------------------------------------------------------------------
 
 source ~/.vimrc_general
+source ~/.vimrc_ctrlp
 source ~/.vimrc_python
 source ~/.vimrc_js
 source ~/.vimrc_syntastic_pymode

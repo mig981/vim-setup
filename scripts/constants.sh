@@ -2,6 +2,9 @@ VIM_DIR=~/.vim
 
 CONFIG_DIR=$VIM_DIR/config
 
+POWERLINE_DIR=$VIM_DIR/bundle/fonts/
+POWERLINE_COMMAND="./install.sh"
+
 YCM_DIR=$VIM_DIR/bundle/YouCompleteMe/
 YCM_SUBMODULES="git submodule update --init --recursive"
 # Add "--omnisharp-completer" for C# support (msbuild or xbuild is required to build Omnisharp)
