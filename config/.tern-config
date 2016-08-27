@@ -1,0 +1,17 @@
+{
+    "plugins": {
+        "modules": {},
+        "commonjs": {},
+        "es_modules": {},
+        "node": {},
+        "angular": {}
+    },
+    "libs": [
+        "ecma5",
+        "ecma6",
+        "browser",
+        "jquery",
+        "underscore",
+        "chai"
+    ]
+}

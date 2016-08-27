@@ -10,7 +10,10 @@ done
 
 # Copying the eslint config into the home directory
 if which eslint > /dev/null; then
-    cp -v $VIM_DIR/linter_config/.eslintrc ~/
+    cp -v $CONFIG_DIR/.eslintrc ~/
 else
     echo "eslint doesn't exist, NOT copying the config file."
 fi
+
+# Copying the Tern config (JS autocomplete) into the home directory
+cp -v $CONFIG_DIR/.tern-config ~/
