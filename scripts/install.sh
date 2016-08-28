@@ -28,15 +28,13 @@ fi
 # Updating submodule (Vundle).
 git submodule update --init --recursive
 
-# Copying all .vimrc files into the home directory
-. scripts/copy.sh
+# Copying .vimrc into the home directory, 
+# cleaning the unused plugins and installing the new ones.
+. scripts/sync.sh
 
-# Installing the plugins (using the default color scheme, because at this point
-# the color scheme in .vimrc are not yet installed)
-vim --cmd 'let force_default_scheme = 1' +BundleInstall +qall
-
-# Compiling fonts
-( cd $POWERLINE_DIR && $POWERLINE_COMMAND )
+# Copying the config files into the home directory 
+# and compiling the Powerline fonts, if needed.
+. scripts/configs.sh
 
 # Compiling YouCompleteMe
 ( cd $YCM_DIR && $YCM_SUBMODULES && $YCM_COMPILE_COMMAND )

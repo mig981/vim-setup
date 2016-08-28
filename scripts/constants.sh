@@ -1,4 +1,4 @@
-VIM_DIR=~/.vim
+VIM_DIR="$HOME/.vim"
 
 CONFIG_DIR=$VIM_DIR/config
 

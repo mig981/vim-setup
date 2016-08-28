@@ -55,8 +55,6 @@ Plugin 'ap/vim-css-color'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
-"Plugin 'jelera/vim-javascript-syntax'
-"Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'burnettk/vim-angular'
 Plugin 'matthewsimo/angular-vim-snippets'
@@ -73,19 +71,3 @@ Plugin 'aleg/vim-color-schemes'
 " All the Plugins must be added before the following lines:
 call vundle#end()  " required
 filetype plugin indent on  " required
-
-"-----------------------------------------------------------------------
-" Settings (see each file for more details)
-"-----------------------------------------------------------------------
-
-source ~/.vimrc_general
-source ~/.vimrc_ctrlp
-source ~/.vimrc_python
-source ~/.vimrc_js
-source ~/.vimrc_syntastic_pymode
-source ~/.vimrc_autocompletion_and_snippets
-source ~/.vimrc_git
-source ~/.vimrc_nerdtree
-source ~/.vimrc_tagbar
-source ~/.vimrc_airline
-source ~/.vimrc_color

@@ -3,7 +3,6 @@
 "-----------------------------------------------------------------------
 " Not setting preview to avoid opening the doc popup.
 set completeopt=longest,menuone
-"au FileType python set omnifunc=pythoncomplete#Complete
 
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

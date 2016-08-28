@@ -1,5 +1,5 @@
 Run:
-./scripts/install.sh
+./scripts/install.sh  # i.e. the first time you install all the things, or to recompile YCM
 
 or:
-./scripts/copy.sh  # this just moves the .vimrc* files to your ~/ dir
+./scripts/sync.sh  # this moves .vimrc* into your $HOME dir, removes the unused plugins, and installs the new ones.
