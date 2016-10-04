@@ -7,8 +7,9 @@ set smartcase
 set incsearch
 "set hlsearch
 
-" Mouse
+" Mouse and cursor.
 set mouse=a
+set gcr=a:blinkon0
 
 " Send more characters to the terminal at once.
 " Makes things smoother, will probably be enabled by my terminal anyway.
@@ -21,8 +22,15 @@ set lazyredraw
 set backspace=indent,eol,start
 
 " Code Folding
-set foldmethod=indent
+"set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
+
+" Wrap lines and scroll.
+set wrap
+set scrolloff=8  " Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
 
 " Splitted windows
 nnoremap ,v :vsplit<CR>

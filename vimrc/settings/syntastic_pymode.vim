@@ -25,8 +25,8 @@ elseif !v:shell_error && s:uname == "Darwin"
     let g:syntastic_echo_current_error = 0
 endif
 
-"let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_scss_checkers = ['sassc', 'scss_lint']
 let g:syntastic_less_checkers = ['lessc']
 let g:syntastic_json_checkers = ['jsonlint']

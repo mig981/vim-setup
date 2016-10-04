@@ -1,11 +1,33 @@
 {
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "node": true,
+        "commonjs": true,
+        "es6": true,
         "amd": true,
         "mocha": true,
-        "phantomjs": true
+        "jasmine": true,
+        "phantomjs": true,
+        "protractor": true,
+        "jquery": true
     },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "angular",
+        "react"
+    ],
+    "extends": [
+        "angular",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "rules": {
         "quotes": [1, "single"]
     }

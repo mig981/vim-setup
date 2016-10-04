@@ -1,7 +1,7 @@
-if !has('python')
-  echo 'In order to use pymatcher plugin, you need +python compiled vim'
-else
+if has('python') || has('python3')
   let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
+else
+  echo 'In order to use pymatcher plugin, you need +python compiled vim'
 endif
 
 let g:ctrlp_lazy_update = 100

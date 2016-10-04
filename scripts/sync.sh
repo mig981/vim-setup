@@ -7,18 +7,20 @@ cp -v "$VIM_DIR/.vimrc" $HOME
 
 # Use `vim` or `gvim`.
 VIM_CMD='vim'
-for i in "$@"
-do
-case $i in
-    -use-gvim)
-    VIM_CMD='gvim -f'  # -f needed so that the shell waits
-    shift
-    ;;
-    *)
-    # unknown option
-    ;;
-esac
-done
+#VIM_CMD='gvim -f'  # -f needed so that the shell waits
+#for i in "$@"
+#do
+#case $i in
+#    #-use-gvim)
+#    -no-gvim)
+#    VIM_CMD='vim'
+#    shift
+#    ;;
+#    *)
+#    # unknown option
+#    ;;
+#esac
+#done
 
 # Installing the plugins (using the default color scheme, because at this point
 # the color schemes are not yet installed)

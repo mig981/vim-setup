@@ -63,7 +63,7 @@ let g:jedi#use_tabs_not_buffers = 1
 " sudo apt-get install build-essential cmake
 " sudo apt-get install python-dev
 " cd ~/.vim/bundle/YouCompleteMe
-" ./install.sh --clang-completer --omnisharp-completer --gocode-completer
+" ./install.py --tern-completer
 let g:ycm_add_preview_to_completeopt = 0
 
 " Make YCM compatible with UltiSnips (using SuperTab).

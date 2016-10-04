@@ -3,14 +3,16 @@ set t_Co=256
 if get(g:, 'force_default_scheme', 0) == 0
     "let g:solarized_termcolors=256
     "colorscheme solarized
-    colorscheme github
+    "colorscheme github
     "colorscheme monokai
-endif
 
-set background=light  " for gibhub
-"set background=dark  " for monokai
+    let g:enable_bold_font = 1
+    colorscheme hybrid_material
+    "set background=light
+    set background=dark
+endif
 
 " Cursor line
 " set cursorline
 set nocursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine term=bold cterm=bold guibg=#555

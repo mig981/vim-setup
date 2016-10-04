@@ -1,14 +1,15 @@
 {
+    "ecmaVersion": 6,
     "plugins": {
         "modules": {},
         "commonjs": {},
         "es_modules": {},
         "node": {},
-        "angular": {}
+        "angular": {},
+        "react": {}
     },
     "libs": [
-        "ecma5",
-        "ecma6",
+        "ecmascript",
         "browser",
         "jquery",
         "underscore",
