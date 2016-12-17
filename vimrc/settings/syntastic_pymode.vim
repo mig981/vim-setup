@@ -19,10 +19,10 @@ elseif !v:shell_error && s:uname == "Darwin"
     let g:syntastic_python_checkers = ['flake8', 'pyflakes']
 
     " Speed issues on Mac
-    " let g:syntastic_enable_signs = 0
-    let g:syntastic_enable_balloons = 0
-    let g:syntastic_enable_highlighting = 0
-    let g:syntastic_echo_current_error = 0
+    "let g:syntastic_enable_signs = 0
+    "let g:syntastic_enable_balloons = 0
+    "let g:syntastic_enable_highlighting = 0
+    "let g:syntastic_echo_current_error = 0
 endif
 
 let g:syntastic_javascript_checkers = ['eslint']

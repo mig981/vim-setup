@@ -67,11 +67,14 @@ nnoremap td :tabclose<CR>
 " Format json.
 map <leader>j :%!python -m json.tool<CR>
 
-" Use <leader>w to toggle display of whitespace
+" Use <leader>w to toggle display of whitespaces.
 nmap <leader>w :set list!<CR>
 
 " Reload the .vimrc settings.
-nmap <leader>r :so $MYVIMRC<CR>
+nmap <leader>z :so $MYVIMRC<CR>
+
+" Reload the current file.
+nmap <leader>e :e<CR>
 
 " If in gvim, remove the toolbar.
 if has('gui_running')
@@ -85,6 +88,8 @@ endif
 let s:uname = system("echo -n \"$(uname)\"")
 if !v:shell_error && s:uname == "Darwin"
     set clipboard=unnamed
+    map <F6> :.w !pbcopy<CR><CR>
+    map <F7> :r !pbpaste<CR>
 endif
 
 " Close a split window without resizing other windows
