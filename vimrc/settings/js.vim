@@ -6,4 +6,4 @@ let g:jsx_ext_required = 0
 "let g:jsx_pragma_required = 1
 
 " Highlighting JS libs keywords.
-let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,angularui,angularuirouter,react,flux,requirejs,jasmine,chai'
+let g:used_javascript_libs = 'underscore,jquery,react,flux,requirejs,jasmine,chai'

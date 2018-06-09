@@ -1,14 +1,6 @@
 " Status bar
 set laststatus=2
 
-" Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-" Fugitive (Git)
-"set statusline+=%{fugitive#statusline()}
-
 " Airline
 "let g:airline_theme = 'zenburn'
 "let g:airline_theme = 'sol'
@@ -22,11 +14,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 2
 let g:airline#extensions#tabline#show_buffers = 0
 
+" Hunks
+let g:airline#extensions#hunks#enabled = 1
+"let g:airline#extensions#hunks#non_zero_only = 0
+"let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
+
 " Other stuff.
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 set encoding=utf-8
 if has('gui_running')

@@ -20,27 +20,29 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'tmux-plugins/vim-tmux'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mileszs/ack.vim'
+"Plugin 'junegunn/goyo.vim'
+"Plugin 'junegunn/limelight.vim'
 
 " Fuzzy search.
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'jremmen/vim-ripgrep'
 
 " Autocompletion and Snippets.
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-" Syntax
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/syntastic'
+" Syntax and related.
+Plugin 'w0rp/ale'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'editorconfig/editorconfig-vim'
 
 " Python.
 Plugin 'klen/python-mode'
-Plugin 'tmhedberg/SimpylFold'
+Plugin 'heavenshell/vim-pydocstring'
 
 " Utils.
 Plugin 'jiangmiao/auto-pairs'
@@ -57,22 +59,17 @@ Plugin 'majutsushi/tagbar'
 
 " HTML
 Plugin 'mattn/emmet-vim'
-Plugin 'mitsuhiko/vim-jinja'
 
 " CSS
 Plugin 'tpope/vim-haml'  " SASS
-Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'ternjs/tern_for_vim'
-"Plugin 'KabbAmine/gulp-vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'justinj/vim-react-snippets'
-Plugin 'burnettk/vim-angular'
-Plugin 'matthewsimo/angular-vim-snippets'
+Plugin 'epilande/vim-react-snippets'
 
 " Status/tabline.
 Plugin 'powerline/fonts'

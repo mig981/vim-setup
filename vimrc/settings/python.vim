@@ -1,26 +1,39 @@
-" Python Indentation (4 spaces for Tab)
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" vim-pydocstring
+nmap <silent> <C-d> <Plug>(pydocstring)
 
-" Not removing indentation on Python comments.
-inoremap # X<BS>#
+"-----------------------------------------------------------------------
+" Python-mode
+"-----------------------------------------------------------------------
 
-"autocmd FileType js :setlocal sw=2 ts=2
-"autocmd FileType html :setlocal sw=2 ts=2
+let g:pymode_lint = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_message = 0
+let g:pymode_lint_cwindow = 0
+let g:pymode_trim_whitespaces = 1
 
-" Comments
-" Comment selected Block with #'s and clean the last search pattern
-"map <F2> :s/^\(.*\)$/#\1/g<CR>
-"map <F2> :s/^\(.*\)$/#\1/g<CR>:let @/ = ""<CR>
-map <F2> :s/^\(.*\)$/#\1/g<CR><bar>:let @/ = ""<CR>
-" Uncomment the selected Block that is commented with #'s
-"map <F3> :s/^#//g<CR>"'
-"map <F3> :s/^#//g<CR>"'<CR>:let @/ = ""<CR>
-map <F3> :s/^#//g<CR>"'<bar>:let @/ = ""<CR>
+" Max length
+"let g:pymode_options_colorcolumn = 0  " Hides the vertical column
+"let g:pymode_lint_config = '$HOME/pylint.rc'
+"let g:pymode_options = 1
 
-" Comments withount using search patterns
-" (useful if the current search is highlighted).
-"vnoremap <F2> :norm 0i#<CR>
-"vnoremap <F3> :norm 0x<CR>
+" Rope (not refactoring nor autocomplete)
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't autofold code
+let g:pymode_folding = 0

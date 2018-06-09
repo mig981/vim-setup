@@ -3,6 +3,16 @@ set number
 set ignorecase
 set smartcase
 
+" Default `updatetime` is 4000.
+set updatetime=500
+
+" Default indentation (4 spaces for Tab)
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
 " Search
 set incsearch
 "set hlsearch
@@ -25,6 +35,9 @@ set backspace=indent,eol,start
 "set foldmethod=indent
 set foldmethod=syntax
 set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
+
 
 " Wrap lines and scroll.
 set wrap
@@ -33,6 +46,8 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Splitted windows
+set splitright
+set splitbelow
 nnoremap ,v :vsplit<CR>
 nnoremap ,h :split<CR>
 

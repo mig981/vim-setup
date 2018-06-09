@@ -15,4 +15,4 @@ endif
 " Cursor line
 " set cursorline
 set nocursorline
-hi CursorLine term=bold cterm=bold guibg=#555
+hi CursorLine term=bold cterm=bold guibg=#555555

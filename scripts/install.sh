@@ -6,7 +6,7 @@ echo
 echo "Make sure you have installed the following packages:"
 echo "* build-essential"
 echo "* cmake"
-echo "* sudo apt-get install ack-grep"
+echo "* ripgrep"
 echo "* python-dev"
 echo "* exuberant-ctags"
 echo "* flake8 (sudo pip install flake8)"
@@ -21,7 +21,6 @@ echo "Recommended but not mandatory:"
 echo "* JSHint (npm install -g jshint)"
 echo "* lessc (http://lesscss.org/#using-less-installation)"
 echo "* sassc (https://github.com/sass/sassc) or scss lint (gem install scss_lint)"
-echo "* jsonlint (https://github.com/scrooloose/syntastic/wiki/JSON%3A---jsonlint)"
 echo "* js-yaml (https://github.com/nodeca/js-yaml)"
 echo
 
