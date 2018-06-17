@@ -23,6 +23,7 @@ Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'junegunn/goyo.vim'
 "Plugin 'junegunn/limelight.vim'
 Plugin 'drmikehenry/vim-fontdetect'
+Plugin 'rhysd/vim-grammarous'
 
 " Fuzzy search.
 Plugin 'ctrlpvim/ctrlp.vim'
