@@ -25,10 +25,8 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 
-set encoding=utf-8
 if has('gui_running')
     let g:airline_powerline_fonts = 1
-    set guifont=Source\ Code\ Pro\ for\ Powerline
 else
     " Unicode symbols
     let g:airline_left_sep = '»'

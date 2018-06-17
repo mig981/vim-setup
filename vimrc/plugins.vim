@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'junegunn/goyo.vim'
 "Plugin 'junegunn/limelight.vim'
+Plugin 'drmikehenry/vim-fontdetect'
 
 " Fuzzy search.
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -39,6 +40,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'w0rp/ale'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Yggdroot/indentLine'
 
 " Python.
 Plugin 'klen/python-mode'

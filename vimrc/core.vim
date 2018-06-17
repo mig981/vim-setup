@@ -1,10 +1,21 @@
 syntax on
+set encoding=utf-8
 set number
 set ignorecase
 set smartcase
 
 " Default `updatetime` is 4000.
 set updatetime=500
+
+if has('gui_running')
+    if fontdetect#hasFontFamily("Monoisome")
+        set guifont=Monoisome
+    elseif fontdetect#hasFontFamily("Iosevka")
+        set guifont=Iosevka\ Medium\ Italic\ 11
+    else
+        set guifont=Source\ Code\ Pro\ for\ Powerline
+    endif
+endif
 
 " Default indentation (4 spaces for Tab)
 set smartindent

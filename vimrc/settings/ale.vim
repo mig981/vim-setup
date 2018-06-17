@@ -3,8 +3,10 @@
 "    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 "augroup END
 
+"let g:ale_sign_error = '●'
 let g:ale_sign_error = '💣'
 let g:ale_sign_warning = '🚩'
+let g:ale_lint_on_enter = 0  " Less distracting when opening a new file
 "let g:ale_completion_enabled = 1
 "let g:ale_sign_column_always = 1
 "let g:ale_change_sign_column_color = 1
