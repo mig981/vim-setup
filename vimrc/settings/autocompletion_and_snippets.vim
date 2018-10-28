@@ -51,7 +51,7 @@ inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 
 let g:jedi#completions_enabled = 0
 let g:jedi#usages_command = "<leader>u"
-let g:jedi#rename_command = "<leader>c"
+let g:jedi#rename_command = "<leader>r"
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 0
 let g:jedi#use_tabs_not_buffers = 1
