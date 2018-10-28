@@ -1,21 +1,65 @@
 syntax on
 set encoding=utf-8
-set number
 set ignorecase
 set smartcase
+
+let mapleader = "\<space>"
+
+" Numbers.
+set number
+set relativenumber
+nnoremap <leader>rn :set relativenumber!<CR>
+
+" Spell check.
+" set spell spelllang=en_gb
+" function! FixLastSpellingError() abort
+"     normal! mm[s1z=`m"
+" endfunction
+" function! FixNextSpellingError() abort
+"     normal! mm]s1z=`m"
+" endfunction
+" nnoremap <leader>fls :call FixLastSpellingError()<CR>
+" nnoremap <leader>fns :call FixNextSpellingError()<CR>
 
 " Default `updatetime` is 4000.
 set updatetime=500
 
 if has('gui_running')
-    if fontdetect#hasFontFamily("Monoisome")
-        set guifont=Monoisome
+    if fontdetect#hasFontFamily("Monoid")
+        set guifont=Monoid
     elseif fontdetect#hasFontFamily("Iosevka")
         set guifont=Iosevka\ Medium\ Italic\ 11
     else
         set guifont=Source\ Code\ Pro\ for\ Powerline
     endif
 endif
+
+" set tags=~/.myctags;
+" map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Moving lines up or down.
+" THIS MAY CHANGE FOR DIFFERENT KEYBOARDS!!
+" ∆ = <A-j>
+" ˚ = <A-k>
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
+" Move cursor by display lines when wrapping.
+nnoremap <silent> j gj
+nnoremap <silent> k gk
+vnoremap <silent> j gj
+vnoremap <silent> k gk
+nnoremap <silent> <Down> gj
+nnoremap <silent> <Up> gk
+vnoremap <silent> <Down> gj
+vnoremap <silent> <Up> gk
+inoremap <silent> <Down> <C-o>gj
+inoremap <silent> <Up> <C-o>gk
 
 " Default indentation (4 spaces for Tab)
 set smartindent
@@ -26,11 +70,20 @@ set autoindent
 
 " Search
 set incsearch
-"set hlsearch
+" Plugin 'wincent/loupe' can be used when hlsearch is on.
+set hlsearch
+" unsets the "last search pattern" register by hitting return
+nnoremap <leader>ls :noh<return>
 
 " Mouse and cursor.
 set mouse=a
 set gcr=a:blinkon0
+
+" Copy / paste.
+set clipboard=unnamed
+
+" formatoptions
+au FileType * setlocal fo-=r fo-=c fo-=o fo+=j fo+=n
 
 " Send more characters to the terminal at once.
 " Makes things smoother, will probably be enabled by my terminal anyway.
@@ -43,12 +96,30 @@ set lazyredraw
 set backspace=indent,eol,start
 
 " Code Folding
-"set foldmethod=indent
-set foldmethod=syntax
-set foldlevel=99
-" Enable folding with the spacebar
-nnoremap <space> za
+if has('folding')
+    " Enable folding with the spacebar
+    nnoremap <leader><space> za
 
+    if has('windows')
+        set fillchars+=vert:┃
+        set fillchars+=fold:·
+    endif
+
+    " set foldmethod=indent  " not as cool as syntax, but faster
+    set foldmethod=syntax
+    set foldlevel=99
+    set foldtext=SetFoldText()
+
+    function! SetFoldText() abort
+        let s:tilde='~'
+        let s:raquo='▶'
+        let s:small_l='ℓ'
+        let l:lines='[' . (v:foldend - v:foldstart + 1) . s:small_l . ']'
+        let l:first=substitute(getline(v:foldstart), '\v *', '', '')
+        let l:dashes=substitute(v:folddashes, '-', s:tilde, 'g')
+        return s:raquo . s:tilde . s:tilde . s:tilde . l:lines . l:dashes . ': ' . l:first
+    endfunction
+endif
 
 " Wrap lines and scroll.
 set wrap
@@ -57,8 +128,8 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Splitted windows
-set splitright
-set splitbelow
+"set splitright
+"set splitbelow
 nnoremap ,v :vsplit<CR>
 nnoremap ,h :split<CR>
 
@@ -73,9 +144,9 @@ nmap oo o<Esc>k
 nmap OO O<Esc>j
 
 " Easy way to close/save a buffer.
-nmap qq :q<CR>
-nmap qf :q!<CR>
-nmap qa :qa<CR>
+nmap <leader>qq :q<CR>
+nmap <leader>qf :q!<CR>
+nmap <leader>qa :qa<CR>
 nmap <F5> <Esc>:w<CR>
 
 " Tab navigation.
@@ -93,7 +164,7 @@ nnoremap td :tabclose<CR>
 " Format json.
 map <leader>j :%!python -m json.tool<CR>
 
-" Use <leader>w to toggle display of whitespaces.
+" Toggles display of whitespaces.
 nmap <leader>w :set list!<CR>
 
 " Reload the .vimrc settings.
@@ -110,14 +181,6 @@ if has('gui_running')
     set guioptions-=L  "remove left-hand scroll bar
 endif
 
-" Mac OS X clipboard sharing.
-let s:uname = system("echo -n \"$(uname)\"")
-if !v:shell_error && s:uname == "Darwin"
-    set clipboard=unnamed
-    map <F6> :.w !pbcopy<CR><CR>
-    map <F7> :r !pbpaste<CR>
-endif
-
 " Close a split window without resizing other windows
 "set noea
 "set equalalways
@@ -127,7 +190,7 @@ augroup Whitespace " {{{
        autocmd!
        " Remove trailing whitespace from selected filetypes {{{
        function! <SID>StripTrailingWhitespace()
-               " Preparation: save the last search, and curson position"
+               " Preparation: save the last search, and cursor position"
                let _s=@/
                let l = line(".")
                let c = col(".")

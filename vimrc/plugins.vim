@@ -23,7 +23,8 @@ Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'junegunn/goyo.vim'
 "Plugin 'junegunn/limelight.vim'
 Plugin 'drmikehenry/vim-fontdetect'
-Plugin 'rhysd/vim-grammarous'
+" Plugin 'rhysd/vim-grammarous'
+Plugin 'wincent/loupe'
 
 " Fuzzy search.
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -73,15 +74,22 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'epilande/vim-react-snippets'
+Plugin 'heavenshell/vim-jsdoc'
+
+" JSON
+Plugin 'elzr/vim-json'
 
 " Status/tabline.
 Plugin 'powerline/fonts'
+" Plugin 'powerline/powerline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Themes
-Plugin 'aleg/vim-color-schemes'
 Plugin 'kristijanhusak/vim-hybrid-material'
+" Plugin 'aleg/vim-color-schemes'
+" Plugin 'trevordmiller/nova-vim'
+" Plugin 'junegunn/seoul256.vim'
 
 
 " All the Plugins must be added before the following lines:
