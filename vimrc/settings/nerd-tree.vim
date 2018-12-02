@@ -7,3 +7,4 @@ let NERDTreeMinimalUI = 1
 let NERDTreeCreatePrefix = 'silent keepalt keepjumps'
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.swp$']
 let NERDTreeHijackNetrw = 1
+" let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"

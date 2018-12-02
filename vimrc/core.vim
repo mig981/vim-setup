@@ -5,6 +5,9 @@ set smartcase
 
 let mapleader = "\<space>"
 
+runtime macros/matchit.vim
+" packadd! matchit
+
 " Numbers.
 set number
 set relativenumber
@@ -12,34 +15,41 @@ nnoremap <leader>rn :set relativenumber!<CR>
 
 " Spell check.
 " set spell spelllang=en_gb
-" function! FixLastSpellingError() abort
-"     normal! mm[s1z=`m"
-" endfunction
-" function! FixNextSpellingError() abort
-"     normal! mm]s1z=`m"
-" endfunction
+
+function! FixLastSpellingError() abort
+    normal! mm[s1z=`m"
+endfunction
+
+function! FixNextSpellingError() abort
+    normal! mm]s1z=`m"
+endfunction
+
+" Enable spell check for commit messages
+if has("autocmd")
+    " autocmd FileType javascript,python,gitcommit setlocal spell spelllang=en_gb
+    autocmd FileType python,javascript,gitcommit setlocal spell spelllang=en_gb
+    autocmd FileType python,javascript,gitcommit nnoremap <leader>fls :call FixLastSpellingError()<CR>
+    autocmd FileType python,javascript,gitcommit nnoremap <leader>fns :call FixNextSpellingError()<CR>
+endif
+
 " nnoremap <leader>fls :call FixLastSpellingError()<CR>
 " nnoremap <leader>fns :call FixNextSpellingError()<CR>
 
+" Buffers.
+nnoremap <leader>bg :tabnew<CR>:b#<CR>
+nnoremap <leader>bc :tabnew<CR>:b#<CR>:tabprev<CR>
+
 " Default `updatetime` is 4000.
 set updatetime=500
-
-if has('gui_running')
-    if fontdetect#hasFontFamily("Monoid")
-        set guifont=Monoid
-    elseif fontdetect#hasFontFamily("Iosevka")
-        set guifont=Iosevka\ Medium\ Italic\ 11
-    else
-        set guifont=Source\ Code\ Pro\ for\ Powerline
-    endif
-endif
 
 " set tags=~/.myctags;
 " map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Moving lines up or down.
-" THIS MAY CHANGE FOR DIFFERENT KEYBOARDS!!
+" THIS MAY CHANGE FOR DIFFERENT KEYBOARDS!! To find out
+" what corresponds to <A-k> and <A-j>, enter insert mode,
+" press <C-v> and then <A-k> (or <A-j>).
 " ∆ = <A-j>
 " ˚ = <A-k>
 nnoremap ∆ :m .+1<CR>==
@@ -160,6 +170,10 @@ nnoremap tt :tabedit<Space>
 nnoremap tn :tabnext<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
+
+" Tab key moves between matching brackets
+" nnoremap <tab> %
+" vnoremap <tab> %
 
 " Format json.
 map <leader>j :%!python -m json.tool<CR>

@@ -15,6 +15,27 @@ call vundle#begin()
 " Let Vundle manage Vundle, required.
 Plugin 'gmarik/Vundle.vim'
 
+" Plugin 'sheerun/vim-polyglot'
+
+" Plugin 'pboettch/vim-cmake-syntax'
+" Plugin 'tpope/vim-git'
+" Plugin 'othree/html5.vim'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'mxw/vim-jsx'
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'Vimjas/vim-python-pep8-indent'
+" Plugin 'vim-python/python-syntax'
+" Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'stephpy/vim-yaml'
+
+" if has('nvim')
+"   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plugin 'Shougo/deoplete.nvim'
+"   Plugin 'roxma/nvim-yarp'
+"   Plugin 'roxma/vim-hug-neovim-rpc'
+" endif
+
 " Awesomeness.
 "Plugin 'tpope/vim-dispatch'
 "Plugin 'tmux-plugins/vim-tmux'
@@ -25,6 +46,13 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'drmikehenry/vim-fontdetect'
 " Plugin 'rhysd/vim-grammarous'
 Plugin 'wincent/loupe'
+" Plugin 'joeytwiddle/sexy_scroller.vim'
+
+" Text objects (general).
+Plugin 'kana/vim-textobj-user'
+" Plugin 'glts/vim-textobj-comment'
+Plugin 'kana/vim-textobj-line'
+Plugin 'whatyouhide/vim-textobj-xmlattr'
 
 " Fuzzy search.
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -45,8 +73,11 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 
 " Python.
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'vim-python/python-syntax'
 Plugin 'heavenshell/vim-pydocstring'
+Plugin 'bps/vim-textobj-python'
 
 " Utils.
 Plugin 'jiangmiao/auto-pairs'
@@ -58,7 +89,6 @@ Plugin 'airblade/vim-gitgutter'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
-"Plugin 'tpope/vim-vinegar'
 Plugin 'majutsushi/tagbar'
 
 " HTML
@@ -83,10 +113,12 @@ Plugin 'elzr/vim-json'
 Plugin 'powerline/fonts'
 " Plugin 'powerline/powerline'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 
 " Themes
-Plugin 'kristijanhusak/vim-hybrid-material'
+" Plugin 'kristijanhusak/vim-hybrid-material'
+" Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
 " Plugin 'aleg/vim-color-schemes'
 " Plugin 'trevordmiller/nova-vim'
 " Plugin 'junegunn/seoul256.vim'
