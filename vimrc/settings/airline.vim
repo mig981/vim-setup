@@ -16,10 +16,12 @@ let g:airline_highlighting_cache = 1
 " Tabs.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_type = 0  " hides 'tabs' on the left
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" let g:airline#extensions#tabline#fnamecollapse = 0
 let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#tab_nr_type = 2
+" let g:airline#extensions#tabline#tab_nr_type = 2
+let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#show_buffers = 0
 
 " Hunks
@@ -55,13 +57,20 @@ let g:airline_mode_map = {
     \ }
 
 let g:airline_powerline_fonts = 1
+" let g:airline_symbols_ascii = 1
 
-if fontdetect#hasFontFamily("Hack Nerd Font")
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
-    let g:airline_symbols.branch = ''
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
 endif
+" Hack Nerd Font
+let g:airline_symbols.branch = ''
+
+" if fontdetect#hasFontFamily("Hack Nerd Font")
+"     if !exists('g:airline_symbols')
+"         let g:airline_symbols = {}
+"     endif
+"     let g:airline_symbols.branch = ''
+" endif
 
 " if has('gui_running')
 "     if !fontdetect#hasFontFamily("Hack Nerd Font")
