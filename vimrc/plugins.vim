@@ -48,6 +48,10 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'wincent/loupe'
 " Plugin 'joeytwiddle/sexy_scroller.vim'
 
+" REPL
+" Plugin 'metakirby5/codi.vim'
+Plugin 'jpalardy/vim-slime'
+
 " Text objects (general).
 Plugin 'kana/vim-textobj-user'
 " Plugin 'glts/vim-textobj-comment'
