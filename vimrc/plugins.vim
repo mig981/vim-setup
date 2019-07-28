@@ -43,7 +43,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'junegunn/goyo.vim'
 "Plugin 'junegunn/limelight.vim'
-Plugin 'drmikehenry/vim-fontdetect'
+" Plugin 'drmikehenry/vim-fontdetect'
 " Plugin 'rhysd/vim-grammarous'
 Plugin 'wincent/loupe'
 " Plugin 'joeytwiddle/sexy_scroller.vim'
@@ -78,6 +78,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'vim-python/python-syntax'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'bps/vim-textobj-python'
+" Plugin 'lambdalisue/vim-pyenv'
 
 " Utils.
 Plugin 'jiangmiao/auto-pairs'
@@ -105,12 +106,13 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'epilande/vim-react-snippets'
 Plugin 'heavenshell/vim-jsdoc'
+" Plugin 'psychollama/further.vim'
 
 " JSON
 Plugin 'elzr/vim-json'
 
 " Status/tabline.
-Plugin 'powerline/fonts'
+" Plugin 'powerline/fonts'
 " Plugin 'powerline/powerline'
 Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
