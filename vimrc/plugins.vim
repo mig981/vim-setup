@@ -129,6 +129,9 @@ Plugin 'morhetz/gruvbox'
 " Plugin 'trevordmiller/nova-vim'
 " Plugin 'junegunn/seoul256.vim'
 
+" Go
+Plugin 'fatih/vim-go'
+
 
 " All the Plugins must be added before the following lines:
 call vundle#end()  " required
