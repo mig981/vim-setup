@@ -5,8 +5,12 @@ set smartcase
 
 let mapleader = "\<space>"
 
-runtime macros/matchit.vim
+runtime! macros/matchit.vim
 " packadd! matchit
+
+" Pressing Tab on the command line will show a menu
+" to complete buffer and file names.
+set wildchar=<Tab> wildmenu wildmode=full
 
 " Numbers.
 set number
@@ -27,9 +31,9 @@ endfunction
 " Enable spell check for commit messages
 if has("autocmd")
     " autocmd FileType javascript,python,gitcommit setlocal spell spelllang=en_gb
-    autocmd FileType python,javascript,gitcommit setlocal spell spelllang=en_gb
-    autocmd FileType python,javascript,gitcommit nnoremap <leader>fls :call FixLastSpellingError()<CR>
-    autocmd FileType python,javascript,gitcommit nnoremap <leader>fns :call FixNextSpellingError()<CR>
+    autocmd FileType python,go,javascript,gitcommit,yaml,markdown setlocal spell spelllang=en_gb
+    autocmd FileType python,go,javascript,gitcommit,yaml,markdown nnoremap <leader>fls :call FixLastSpellingError()<CR>
+    autocmd FileType python,go,javascript,gitcommit,yaml,markdown nnoremap <leader>fns :call FixNextSpellingError()<CR>
 endif
 
 " nnoremap <leader>fls :call FixLastSpellingError()<CR>
@@ -71,12 +75,35 @@ vnoremap <silent> <Up> gk
 inoremap <silent> <Down> <C-o>gj
 inoremap <silent> <Up> <C-o>gk
 
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Bell
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+    autocmd GUIEnter * set visualbell t_vb=
+endif
+
 " Default indentation (4 spaces for Tab)
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+" set nowrap
+
+" Indentation
+nnoremap <leader><Tab> >>
+nnoremap <leader><S-Tab> <<
+vnoremap <leader><Tab> >
+vnoremap <leader><S-Tab> <
+
+" highlight TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+" highlight TabLine ctermfg=Blue ctermbg=Yellow
+" highlight TabLineSel ctermfg=Red ctermbg=Yellow
+" highlight Title ctermfg=LightBlue ctermbg=Magenta
 
 " Search
 set incsearch
@@ -87,7 +114,11 @@ nnoremap <leader>ls :noh<return>
 
 " Mouse and cursor.
 set mouse=a
-set gcr=a:blinkon0
+set gcr=a:blinkon0  " do not blink mouse on GUI vim
+" if &term =~ '^screen'
+"     " tmux knows the extended mouse mode
+"     set ttymouse=xterm2
+" endif
 
 " Copy / paste.
 set clipboard=unnamed
