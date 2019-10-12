@@ -1,7 +1,8 @@
 " Status bar
 set laststatus=2
 
-" Airline
+" https://github.com/vim-airline/vim-airline/wiki/FAQ#i-have-a-performance-problem
+
 "let g:airline_theme = 'zenburn'
 "let g:airline_theme = 'sol'
 "let g:airline_theme = 'silver'
@@ -24,16 +25,17 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#show_buffers = 0
 
-" Hunks
+" Git
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 "let g:airline#extensions#hunks#non_zero_only = 0
 "let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
 
 " Other stuff.
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
+" let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 " let g:airline#extensions#ycm#enabled = 1
 
 let g:airline_mode_map = {
@@ -63,7 +65,14 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 " Hack Nerd Font
-let g:airline_symbols.branch = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.branch = '  '
+
+" Powerline symbols
+" The `dirty` symbol causes problems with the row and columns
+" number being displayed with extra numbers.
+" let g:airline_symbols.dirty=⚡
+let g:airline_symbols.dirty='✳'
 
 " if fontdetect#hasFontFamily("Hack Nerd Font")
 "     if !exists('g:airline_symbols')

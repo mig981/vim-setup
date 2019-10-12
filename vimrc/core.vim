@@ -20,6 +20,8 @@ nnoremap <leader>rn :set relativenumber!<CR>
 " Spell check.
 " set spell spelllang=en_gb
 
+set spellfile=~/.vim/spell/techspeak.utf-8.add
+
 function! FixLastSpellingError() abort
     normal! mm[s1z=`m"
 endfunction
@@ -149,6 +151,7 @@ if has('folding')
     " set foldmethod=indent  " not as cool as syntax, but faster
     set foldmethod=syntax
     set foldlevel=99
+    set foldnestmax=5
     set foldtext=SetFoldText()
 
     function! SetFoldText() abort
@@ -229,6 +232,12 @@ endif
 " Close a split window without resizing other windows
 "set noea
 "set equalalways
+
+" Profiling
+nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
+nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
+nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
+nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
 
 " Remove trailing whitespace
 augroup Whitespace " {{{

@@ -72,13 +72,13 @@ Plugin 'honza/vim-snippets'
 
 " Syntax and related.
 Plugin 'w0rp/ale'
-Plugin 'tmhedberg/SimpylFold'
+Plugin 'tmhedberg/SimpylFold'  " slow on large files (115_cache)
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 
 " Python.
 " Plugin 'klen/python-mode'
-Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'Vimjas/vim-python-pep8-indent'  " slow on large files (120_find_opening_paren or 120__skip_special_chars)
 Plugin 'vim-python/python-syntax'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'bps/vim-textobj-python'
@@ -101,7 +101,7 @@ Plugin 'mattn/emmet-vim'
 
 " CSS
 Plugin 'tpope/vim-haml'  " SASS
-Plugin 'ap/vim-css-color'
+Plugin 'ap/vim-css-color'  " slow on large files (126_create_matches)
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
@@ -119,6 +119,7 @@ Plugin 'elzr/vim-json'
 " Plugin 'powerline/fonts'
 " Plugin 'powerline/powerline'
 Plugin 'vim-airline/vim-airline'
+" Plugin 'rbong/vim-crystalline' " TODO: alternative to airline
 " Plugin 'vim-airline/vim-airline-themes'
 
 " Themes
