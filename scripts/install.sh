@@ -43,3 +43,10 @@ git submodule update --init --recursive
 
 # Compiling YouCompleteMe
 ( cd $YCM_DIR && $YCM_SUBMODULES && $YCM_COMPILE_COMMAND )
+
+echo
+echo "To activate Go support:"
+echo "Navigate to:"
+echo "You CompleteMe/third_party/ycmd/third_party/go/src/golang.org/x/tools/cmd/gopls"
+echo "and run:"
+echo "go build"
