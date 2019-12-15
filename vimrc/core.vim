@@ -12,6 +12,10 @@ runtime! macros/matchit.vim
 " to complete buffer and file names.
 set wildchar=<Tab> wildmenu wildmode=full
 
+" Remap <Esc> in insert and visual mode to CTRL-\.
+inoremap <C-\> <Esc>
+vnoremap <C-\> <Esc>
+
 " Numbers.
 set number
 set relativenumber
