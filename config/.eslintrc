@@ -20,7 +20,6 @@
         }
     },
     "plugins": [
-        "angular",
         "react"
     ],
     "extends": [
