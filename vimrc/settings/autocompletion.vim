@@ -16,9 +16,10 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " SuperTab
 "-----------------------------------------------------------------------
 
-let g:SuperTabDefaultCompletionType = "context"
-" Navigate the completion menu from top to bottom.
-let g:SuperTabContextDefaultCompletionType = "<C-n>"
+" let g:SuperTabDefaultCompletionType = "context"
+" " Navigate the completion menu from top to bottom.
+" let g:SuperTabContextDefaultCompletionType = "<C-n>"
+
 " <Enter> key when the popup menu is visible will select the highlighted menu item (as <C-Y> does)
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
@@ -51,10 +52,21 @@ inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 
 let g:jedi#completions_enabled = 0
 let g:jedi#usages_command = "<leader>u"
-let g:jedi#rename_command = "<leader>c"
+let g:jedi#rename_command = "<leader>r"
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = 0
 let g:jedi#use_tabs_not_buffers = 1
+
+" if jedi#init_python()
+"   function! s:jedi_auto_force_py_version() abort
+"     let g:jedi#force_py_version = pyenv#python#get_internal_major_version()
+"   endfunction
+"   augroup vim-pyenv-custom-augroup
+"     autocmd! *
+"     autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
+"     autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
+"   augroup END
+" endif
 
 "-----------------------------------------------------------------------
 " YouCompleteMe (YCM)
@@ -69,17 +81,3 @@ let g:ycm_add_preview_to_completeopt = 0
 " Make YCM compatible with UltiSnips (using SuperTab).
 "let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 "let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
-"-----------------------------------------------------------------------
-" Ultisnips
-"-----------------------------------------------------------------------
-
-" Trigger configuration. Do not use <tab> if you use YouCompleteMe.
-"let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsExpandTrigger="<C-j>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-let g:UltiSnipsListSnippets="<C-b>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"

@@ -1,3 +1,6 @@
 *.swp
 bundle/*
 !bundle/Vundle.vim
+spell
+
+.DS_store
